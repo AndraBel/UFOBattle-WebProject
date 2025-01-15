@@ -1,0 +1,208 @@
+/* Reset and box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.buttons {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 12px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  color: #ffffff;
+  background: linear-gradient(45deg, #840ad5, #5e11f7);
+  border: none;
+  border-radius: 5px;
+  text-shadow: 1px 1px 2px #000;
+  box-shadow: 0px 4px 10px rgba(94, 17, 247, 0.6);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  margin-top: 2rem;
+}
+
+.buttons:hover {
+  background: linear-gradient(45deg, #5e11f7, #840ad5);
+  box-shadow: 0px 6px 15px rgba(94, 17, 247, 0.8);
+  transform: scale(1.1);
+}
+
+.buttons:active {
+  transform: scale(1.05);
+  box-shadow: 0px 3px 8px rgba(94, 17, 247, 0.4);
+}
+
+.record-confirm {
+  position: fixed;
+  width: 330px;
+  height: 130px;
+  padding: 20px;
+  background-color: rgba(80, 233, 203, 0.8);
+  box-shadow: #5e11f7 0px 0px 30px;
+  border-radius: 5px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  color: #ae2af1;
+  font-size: 18px;
+  bottom: 28rem;
+  left: 45rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Score Container */
+.score-container {
+  position: fixed;
+  width: 150px;
+  padding: 20px;
+  background-color: rgba(166, 251, 234, 0.4);
+  box-shadow: #5e11f7 0px 0px 30px;
+  border-radius: 5px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  color: #000;
+  bottom: 100px;
+  left: 20px;
+  z-index: 10;
+}
+
+.score-container h1 {
+  color: #ffffff;
+  text-shadow: 2px 2px 4px #000;
+  font-weight: bold;
+  margin: 10px 0 5px;
+  font-size: 20px;
+}
+
+.time {
+  color: #840ad5;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.score-container .score-header {
+  margin-bottom: 20px;
+}
+
+.score {
+  background-color: #840ad5;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.5em;
+  padding: 6px 30px;
+  border-radius: 10px;
+  margin-top: 10px;
+  box-shadow: #5e0bf7 0px 0px 20px;
+}
+
+/* Missile */
+#missile {
+  position: absolute;
+  bottom: 10px;
+  left: 300px;
+  z-index: 10;
+  height: 80px;
+  width: 60px;
+  transition: left 0.1s linear;
+}
+
+/* UFOs */
+#ufo {
+  position: absolute;
+  bottom: 375px;
+  left: 0px;
+}
+
+.setOfUfos {
+  position: absolute;
+  width: 60px;
+  transition: left 0.1s linear;
+}
+
+/* Body and Background */
+body {
+  margin: 0;
+  overflow: hidden;
+  background-color: black;
+}
+
+#star-containerr {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 0; /* Ensure stars are behind the leaderboard */
+  background: black;
+}
+
+.star {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, #fff, rgba(255, 255, 255, 0.3));
+  opacity: 0;
+  animation: shine 5s infinite, move 10s infinite alternate;
+}
+
+/* Add falling behavior dynamically */
+.falling {
+  animation: vaultFall 10s ease-out, fadeOut 3s forwards infinite; /* Combined animation */
+}
+
+/* Twinkling stars animation */
+@keyframes shine {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Slight movement for stationary stars */
+@keyframes move {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  100% {
+    transform: translateY(10px) translateX(10px);
+  }
+}
+
+/* Vaulted falling animation */
+@keyframes vaultFall {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(50vw, 20vh); /* Move diagonally with a vault */
+  }
+  50% {
+    transform: translate(75vw, 40vh); /* Peak vault */
+  }
+  100% {
+    transform: translate(100vw, 100vh); /* Exit the screen */
+  }
+}
+
+/* Fade-out animation */
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

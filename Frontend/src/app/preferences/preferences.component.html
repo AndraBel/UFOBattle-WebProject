@@ -1,0 +1,59 @@
+<body>
+  <div class="rectangle">
+    <div class="form-container">
+      <form class="ufo-form">
+        <div class="form-entry">
+          <label id="number-of-ufos">Number of UFOs: </label>
+          <select
+            name="number-of-ufos"
+            class="number-of-ufos"
+            [(ngModel)]="ufos"
+            required
+          >
+            <option value="1" selected>1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+        <br />
+        <div class="form-entry">
+          <label id="time">Time (seconds): </label>
+          <select name="time" class="time" [(ngModel)]="time" required>
+            <option value="60" selected>60</option>
+            <option value="120">120</option>
+            <option value="180">180</option>
+          </select>
+        </div>
+        <br />
+      </form>
+    </div>
+    <div class="buttons-container">
+      <button
+        type="submit"
+        class="submitButton"
+        (click)="saveLocalPreferences()"
+      >
+        Save local
+      </button>
+      <button
+        type="submit"
+        class="submitButton"
+        (click)="saveServerPreferences()"
+      >
+        Save server
+      </button>
+      <button
+        type="submit"
+        class="submitButton"
+        (click)="getServerPreferences()"
+      >
+        Get from server
+      </button>
+    </div>
+    <button type="submit" class="submitButtonStart" (click)="startGame()">
+      Start Game
+    </button>
+  </div>
+</body>

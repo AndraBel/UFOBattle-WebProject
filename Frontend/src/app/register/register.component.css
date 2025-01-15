@@ -1,0 +1,110 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url("/resources/lgn.png");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Wrapper (Login Form Container) */
+.wrapper {
+  width: 420px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 30px 40px;
+  border-radius: 1rem;
+}
+
+.register-link {
+  cursor: pointer;
+}
+
+.wrapper h1 {
+  font-size: 36px;
+  text-align: center;
+  text-shadow: 2px 2px black;
+}
+
+/* Input Box */
+.wrapper .input-box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 30px 0;
+}
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  font-size: 16px;
+  color: #fff;
+  padding: 20px 40px 20px 20px;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 40px;
+}
+
+.input-box input::placeholder {
+  color: #fff;
+}
+
+/* Submit Button */
+.wrapper .btn {
+  width: 100%;
+  height: 45px;
+  background: #fff;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  color: #333;
+  font-weight: 600;
+  transition: 0.5s;
+}
+
+.wrapper .btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  color: #fff;
+  border-color: #fff;
+}
+
+/* Register Link */
+.wrapper .register-link {
+  font-size: 14.5px;
+  text-align: center;
+  margin: 20px 0 15px;
+}
+
+.register-link p a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.register-link p a:hover {
+  text-decoration: underline;
+}
+.warning-message {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
+  display: block;
+  margin-left: 0.7rem;
+}

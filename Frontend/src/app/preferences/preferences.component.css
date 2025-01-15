@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url("/resources/prefer.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.rectangle {
+  width: 600px;
+  height: 295px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 30px 40px;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.ufo-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 300px;
+  margin-top: 12px;
+}
+
+.form-entry {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+label {
+  font-size: 16px;
+  color: #333;
+}
+
+select {
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: #fff;
+}
+
+#number-of-ufos,
+#time {
+  color: aquamarine;
+  text-shadow: 1px 1px 2px #220186;
+  font-size: 20px;
+}
+
+.number-of-ufos,
+.time {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ac4caf;
+  color: aquamarine;
+  text-shadow: 1px 1px 2px #012986;
+  font-size: 15px;
+  box-shadow: 0 0 10px rgb(0, 255, 234);
+}
+
+.submitButton,
+.submitButtonStart {
+  padding: 10px 20px;
+  font-size: 18px;
+  color: aquamarine;
+  background-color: #ac4caf;
+  text-shadow: 2px 2px 4px #220283;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submitButtonStart {
+  padding: 10px 20px;
+  margin-top: 0.5rem;
+  width: 441px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 38px;
+}
+
+.submitButton:hover,
+.submitButtonStart:hover {
+  background-color: #2b80b8;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}

@@ -1,0 +1,56 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+  background-color: #0c0e1b;
+}
+/* Customize success toastr */
+.toast-success {
+  background-color: #ac4caf !important; /* Green background */
+  color: aquamarine !important; /* White text */
+  text-shadow: 2px 2px 2px #220283;
+  display: flex;
+  justify-content: center;
+}
+
+/* Customize error toastr */
+.toast-error {
+  background-color: #e17169 !important; /* Red background */
+  color: white !important; /* White text */
+  display: flex;
+  justify-content: center;
+}
+
+/* Customize info toastr */
+.toast-info {
+  background-color: #4aa8f5 !important; /* Blue background */
+  color: white !important; /* White text */
+  display: flex;
+  justify-content: center;
+}
+
+/* Customize warning toastr */
+.toast-warning {
+  background-color: #ff9800 !important; /* Orange background */
+  color: white !important; /* White text */
+  display: flex;
+  justify-content: center;
+}
+
+/* Customize toastr container */
+#toast-container > div {
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Add shadow */
+}
+
+/* Customize toast title and message */
+.toast-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.toast-message {
+  font-size: 17px;
+  display: flex;
+  justify-content: center;
+  /* font-style: italic; */
+}

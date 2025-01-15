@@ -1,0 +1,40 @@
+<body>
+  <section class="wrapper">
+    <form>
+      <h1>Login</h1>
+
+      <div class="input-box">
+        <input
+          type="text"
+          placeholder="Username"
+          id="username"
+          [(ngModel)]="username"
+          name="username"
+          autocomplete="username"
+          required
+        />
+      </div>
+
+      <div class="input-box">
+        <input
+          type="password"
+          placeholder="Password"
+          id="pwd"
+          [(ngModel)]="password"
+          name="password"
+          autocomplete="current-password"
+          required
+        />
+      </div>
+
+      <button type="submit" class="btn" (click)="doLogin()">Login</button>
+
+      <div class="register-link">
+        <p>
+          Don't have an account? <br />
+          <a class="register-link" (click)="goToRegister()">Register</a>
+        </p>
+      </div>
+    </form>
+  </section>
+</body>

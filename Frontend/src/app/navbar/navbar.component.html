@@ -1,0 +1,67 @@
+<nav class="navn">
+  <ul class="navbar">
+    <div class="leftPart">
+      <li>
+        <a routerLink="/home" routerLinkActive="active" class="buttons">
+          <img src="/resources/home.png" class="icons" />Home
+        </a>
+      </li>
+      <li>
+        <a routerLink="/preferences" routerLinkActive="active" class="buttons">
+          <img src="/resources/preferences.png" class="icons" />Preferences
+        </a>
+      </li>
+      <li>
+        <a routerLink="/play" routerLinkActive="active" class="buttons">
+          <img src="/resources/play.png" class="icons" />Play
+        </a>
+      </li>
+      <li>
+        <a routerLink="/records" routerLinkActive="active" class="buttons">
+          <img src="/resources/records.png" class="icons" />Records
+        </a>
+      </li>
+      <li>
+        <a
+          routerLink="/messages"
+          routerLinkActive="active"
+          class="buttons"
+          *ngIf="loggedIn"
+        >
+          <img src="/resources/chat.png" class="icons" />Messages
+        </a>
+      </li>
+    </div>
+    <div class="rightPart" id="nav">
+      <li class="right" *ngIf="!loggedIn">
+        <a routerLink="/register" routerLinkActive="active" class="buttons">
+          <img src="/resources/alien.png" class="icons" /> Register
+        </a>
+      </li>
+      <li class="right" *ngIf="loggedIn">
+        <a class="buttons">
+          <img src="/resources/alien.png" class="icons" /> {{ username }}
+        </a>
+      </li>
+      <li class="right" id="loginn">
+        <a
+          routerLink="/login"
+          routerLinkActive="active"
+          class="buttons"
+          *ngIf="!loggedIn"
+        >
+          <img src="/resources/login.png" class="icons" /> Login
+        </a>
+      </li>
+      <li>
+        <a
+          routerLink="home"
+          routerLinkActive="active"
+          *ngIf="loggedIn"
+          (click)="logOut()"
+          >Logout</a
+        >
+      </li>
+    </div>
+  </ul>
+</nav>

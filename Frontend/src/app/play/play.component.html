@@ -1,0 +1,36 @@
+<body>
+  <div id="star-containerr"></div>
+
+  <div id="container">
+    <div class="score-container">
+      <h1>
+        Time left: <span class="time">{{ time }}</span>
+      </h1>
+      <h1 class="score-header">Score:</h1>
+      <div class="score">{{ score }}</div>
+    </div>
+
+    <img id="missile" src="/resources/missle.png" style="left: 300px" />
+  </div>
+  <div class="record-confirm" *ngIf="endOfTheGame">
+    {{ endText }}
+    <div class="buttons-container">
+      <button
+        (click)="handleYesClick(); saveScore()"
+        class="buttons"
+        *ngIf="showYesButton"
+      >
+        Yes
+      </button>
+      <button (click)="resetGame()" class="buttons">Play Again</button>
+      <button
+        routerLink="/home"
+        routerLinkActive="active"
+        class="buttons"
+        (click)="goodbye()"
+      >
+        Exit
+      </button>
+    </div>
+  </div>
+</body>

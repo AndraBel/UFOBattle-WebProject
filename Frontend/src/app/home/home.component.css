@@ -1,0 +1,99 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0c0e1b;
+  color: #fff;
+  margin: 0;
+}
+
+/* Header Styles */
+header {
+  background: url("/resources/img.png") no-repeat center center/cover;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.header-content {
+  margin-top: 165px;
+}
+
+.header-content h1 {
+  font-size: 4rem;
+  text-shadow: 0 0 15px #00ffcc;
+}
+
+.header-content p {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+/* Section Styles */
+.section {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.5rem;
+  color: #00ffcc;
+  text-shadow: 0 0 15px #982bf1;
+  margin-bottom: 1rem;
+}
+
+.section p {
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+}
+
+#presentationText {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #ff00ea;
+  text-shadow: 1px 1px 5px rgb(48, 48, 252);
+}
+
+/* Button Styles */
+.cta-btn {
+  background-color: #00ffcc;
+  color: #7a31d3;
+  border: none;
+  padding: 0.75rem 2rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #af16ec;
+  transform: scale(1.05);
+}
+
+.cta-btn .linkFormat {
+  text-decoration: none;
+  color: #7219e7;
+  text-shadow: 0 0 15px #3c00ab;
+}
+
+footer {
+  background-color: #111;
+  color: #00ffcc;
+  padding: 0.5rem;
+  text-align: center;
+  position: relative;
+  width: 100%;
+}
+
+footer p {
+  margin: 0;
+  font-size: 1rem;
+}

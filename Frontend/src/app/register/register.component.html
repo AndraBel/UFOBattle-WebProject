@@ -1,0 +1,48 @@
+<body>
+  <div class="wrapper">
+    <form (submit)="onRegister()">
+      <h1>Register</h1>
+      <div class="input-box">
+        <input
+          placeholder="Username"
+          [(ngModel)]="username"
+          name="username"
+          required
+          autocomplete="username"
+          (input)="validateUsername()"
+          (blur)="checkUsername()"
+        />
+        <small *ngIf="usernameWarning" class="warning-message">
+          Username cannot exceed 8 characters.
+        </small>
+      </div>
+
+      <div class="input-box">
+        <input
+          type="email"
+          placeholder="Email"
+          [(ngModel)]="email"
+          name="email"
+          required
+          autocomplete="username"
+          [disabled]="!validUsername"
+        />
+      </div>
+
+      <div class="input-box">
+        <input
+          type="password"
+          placeholder="Password"
+          [(ngModel)]="password"
+          name="password"
+          required
+          [disabled]="!validUsername"
+          autocomplete="new-password"
+        />
+      </div>
+      <button type="submit" class="btn" id="btn" [disabled]="!validUsername">
+        Register
+      </button>
+    </form>
+  </div>
+</body>
